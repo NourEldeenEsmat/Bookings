@@ -1,0 +1,36 @@
+<nz-list *ngFor="let item of data" class="demo-loadmore-list">
+    <!-- @for (item of list; track item) { -->
+    <nz-list-item>
+        <!-- @if (item.loading) { -->
+        <!-- <nz-skeleton [nzAvatar]="true" [nzActive]="true" [nzTitle]="false" [nzLoading]="true" /> -->
+        <!-- } @else { -->
+        <ng-container>
+            <nz-list-item-meta nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                nzDescription="{{item.adId}} {{item.date}}">
+                <nz-list-item-meta-title>
+                    <a href="https://ng.ant.design">{{item.companyId}}</a>
+                </nz-list-item-meta-title>
+            </nz-list-item-meta>
+            <div>
+                <h3 *ngIf="item.state=='REJECTED'" style="color: red;">{{item.state}}</h3>
+
+                <h3 *ngIf="item.state=='ACCEPTED'" style="color: green;">{{item.state}}</h3>
+
+                <h3 *ngIf="item.state=='WAITED'" style="color: gray;">{{item.state}}</h3>
+            </div>
+
+            <ul nz-list-item-actions>
+                <nz-list-item-action><a routerLink="/reviewR/{{item.adId}}/{{item.userId}}/{{item.reserveId}}">View</a></nz-list-item-action>
+                <nz-list-item-action><a *ngIf="item.state=='WAITED'" (click)="companyAction(item.reserveId,0)" style="color: greenyellow;">Accept</a></nz-list-item-action>
+                <nz-list-item-action><a *ngIf="item.state=='WAITED'" (click)="companyAction(item.reserveId,1)" style="color: red;">Reject</a></nz-list-item-action>
+            </ul>
+        </ng-container>
+
+    </nz-list-item>
+
+    <!-- <div class="loadmore" nz-list-load-more> -->
+    <!-- @if (!loadingMore) { -->
+    <!-- <button nz-button routerLink="/review/{{item.adId}}">View</button> -->
+    <!-- } -->
+    <!-- </div> -->
+</nz-list>  

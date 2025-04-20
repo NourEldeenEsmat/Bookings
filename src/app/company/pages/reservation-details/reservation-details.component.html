@@ -1,0 +1,57 @@
+<div class="list-container">
+    <nz-list nzItemLayout="vertical"  class="list">
+      <nz-list-item class="list-item">
+        <nz-list-item-meta class="list-item-meta">
+            <nz-list-item-meta-title class="title">
+              <a >serviceName: {{ item.serviceName}}</a>
+            </nz-list-item-meta-title>
+            <nz-list-item-meta-description class="description">
+              serviceDetails: {{ item.serviceDetails }}
+            </nz-list-item-meta-description>
+            <nz-list-item-meta-description class="description">
+              companyName: {{ item.companyName}}
+            </nz-list-item-meta-description>
+        </nz-list-item-meta>
+        <nz-list-item-meta class="list-item-meta">
+          <nz-list-item-meta-title class="title">
+            <a >Ordered By : {{user.name}} {{user.lastName}}</a>
+          </nz-list-item-meta-title>
+          <nz-list-item-meta-description class="description">
+           Email : {{ user.email }}
+          </nz-list-item-meta-description>
+          <nz-list-item-meta-description class="description">
+           Phone Number : {{ user.phone}}
+          </nz-list-item-meta-description>
+      </nz-list-item-meta>
+        <div class="price">
+          Price: {{ item.price }} $
+        </div>
+        <div class="container" style="margin: 20px;"> 
+          <button class="delete-button" *ngIf="reservation.state=='WAITED'" (click)="companyAction(RId,0)" style="background-color: chartreuse;">ACCEPT</button> 
+          <button class="delete-button" *ngIf="reservation.state=='WAITED'" (click)="companyAction(RId,1)" style="background-color: red;margin-left: 10px;">REJECT</button> 
+        </div>
+        <div style="text-align: center;">
+          <h3 *ngIf="reservation.state=='REJECTED'" style="color: red;text-align: center;">{{reservation.state}}</h3>
+
+          <h3 *ngIf="reservation.state=='ACCEPTED'" style="color: green;text-align: center;">{{reservation.state}}</h3>
+
+          <h3 *ngIf="reservation.state=='WAITED'" style="color: gray;text-align: center;">{{reservation.state}}</h3>
+      </div>
+        <ul nz-list-item-actions class="actions">
+          <li nz-list-item-action class="action">
+            <span nz-icon nzType="star-o" class="icon"></span> 156
+          </li>
+          <li nz-list-item-action class="action">
+            <span nz-icon nzType="star-o" class="icon"></span> 156
+          </li>
+          <li nz-list-item-action class="action">
+            <span nz-icon nzType="star-o" class="icon"></span> 2
+          </li>
+        </ul>
+        <nz-list-item-extra class="item-extra">
+          <img width="272" alt="logo" [src]="uploudImg(item.image)" class="extra-image" />
+        </nz-list-item-extra>
+      </nz-list-item>
+    </nz-list>
+  </div>
+  

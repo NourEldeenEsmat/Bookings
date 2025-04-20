@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Create New Ad</h1>
+  <form [formGroup]="createAdForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="serviceName">Service Name:</label>
+      <input type="text" id="serviceName" formControlName="serviceName" required>
+      <div *ngIf="createAdForm.get('serviceName')?.invalid && createAdForm.get('serviceName')?.touched" class="error">
+        Service Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="serviceDetails">Service Details:</label>
+      <textarea id="serviceDetails" formControlName="serviceDetails" rows="4" required></textarea>
+      <div *ngIf="createAdForm.get('serviceDetails')?.invalid && createAdForm.get('serviceDetails')?.touched" class="error">
+        Service Details are required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" formControlName="price" required>
+      <div *ngIf="createAdForm.get('price')?.invalid && createAdForm.get('price')?.touched" class="error">
+        Valid Price is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" (change)="onFileChange($event)" required>
+      <div *ngIf="createAdForm.get('image')?.invalid && createAdForm.get('image')?.touched" class="error">
+        Image is required.
+      </div>
+    </div>
+    <button type="submit">Create Ad</button>
+  </form>
+</div>

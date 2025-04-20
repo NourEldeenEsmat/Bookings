@@ -1,0 +1,126 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  .list {
+    width: 100%;
+  }
+  
+  .list-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .list-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .list-item-meta {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .avatar {
+    margin-right: 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .meta-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1890ff;
+    text-decoration: none;
+  }
+  
+  .title a:hover {
+    text-decoration: underline;
+  }
+  
+  .description {
+    color: white;
+    margin-top: 4px;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .actions {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: flex;
+  }
+  
+  .action {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 4px;
+    color: #ffd700;
+  }
+  
+  .item-extra {
+    margin-top: 16px;
+  }
+  
+  .extra-image {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    height: 200px;
+  }
+  
+  .extra-image:hover {
+    transform: scale(1.05);
+  }
+  
+.container {
+  text-align: center;
+}
+
+.delete-button {
+  background-color: #1a14cc;
+  /* Red color for delete action */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #36b0d9;
+  /* Darker red on hover */
+}
+
+.delete-button:active {
+  background-color: #1b14dd;
+  /* Even darker red on click */
+}
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 133, 255, 0.5);
+  /* Focus ring */
+}
