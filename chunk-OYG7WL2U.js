@@ -1,0 +1,1 @@
+import{b as n}from"./chunk-35HBD23Z.js";import{k as t}from"./chunk-EWED3J74.js";import{aa as i,la as r,zc as e}from"./chunk-STNRANWF.js";var s=[{path:"",component:n}],l=(()=>{class o{static{this.\u0275fac=function(m){return new(m||o)}}static{this.\u0275mod=r({type:o})}static{this.\u0275inj=i({imports:[e,t.forChild(s),t]})}}return o})();export{l as ClintModule};
