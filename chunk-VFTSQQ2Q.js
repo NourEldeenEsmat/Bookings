@@ -1,1 +1,0 @@
-import{b as m}from"./chunk-FA3OL3ZF.js";import{k as t}from"./chunk-EWED3J74.js";import{aa as r,la as e,zc as i}from"./chunk-STNRANWF.js";var p=[{path:"",component:m}],u=(()=>{class o{static{this.\u0275fac=function(n){return new(n||o)}}static{this.\u0275mod=e({type:o})}static{this.\u0275inj=r({imports:[i,t.forChild(p),t]})}}return o})();export{u as CompanyModule};
